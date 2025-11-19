@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>My Hobbies</title>
 </head>
 <body>
-    <h1 class="text">ABOUT ME</h1>
+    <!-- add:
+    An Ordered List:	 A numbered list of 3 hobbies.
+    A Horizontal Line:   A line to visually separate sections.
+    -->
+
+    <h1 class="text">MY HOBBIES</h1>
     <a href="index.html"><p style="text-align:center; font-size: 70%; border: 5px outset #EDEDED; width: 8%;"><strong>back button</strong></p></a>
     <br>
     <hr>
-    <p class="text">i am angelina :thumbs_up:</p>
-    <p class="text">this is a paragraph</p>
+    <p class="text">i like doing things</p>
+    <p class="text">like these things:</p>
+    <br>
+    <ol class="list">
+        <li >gaming</li>
+        <li>drawing</li>
+        <li>coding</li>
+        </ol>
     <br>
     <img class="images" src="https://media.tenor.com/3SHajRoXGRUAAAAM/explosion-cats.gif" height="280px">
 </body>
@@ -30,6 +41,9 @@
     }
     .text {
         text-align: center;
+        display: block;
+        margin: auto;
+        width: 40%;
     }
 
     h1 {
@@ -48,5 +62,11 @@
         width: 30%;
         text-align: center;
     }
+    .list {
+        display: block;
+        margin: auto;
+        width: 10%;
+    }
+
 </style>
 </html>
