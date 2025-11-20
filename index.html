@@ -3,29 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-</head>
+    <title>Signage</title>
+
 <body>
-    <h1 class="text">PORTFOLIO</p></h1>
-    <br>
-    <img class="images" src="https://media.tenor.com/Wh_-qzzx1LIAAAAi/cat-eating-chips-cat-eating-ruffles.gif" height="280px">
+    <!--DOESNT KEEP INFO !! NO WORRY !!-->
     <br>
     <hr>
     <br>
-    <a href="aboutme.html"><p style="text-align:center; font-size: 240%; border: 5px outset #EDEDED;"><strong>About Me</strong></p></a>
     <br>
-    <a href="myhobbies.html"><p style="text-align:center; font-size: 240%; border: 5px outset #EDEDED;"><strong>My hobbies</strong></p></a>
+    <form action="/portfolio.html">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" id="submitBtn" value="Submit" disabled>
+    </form>
+
+    <script>
+        const fname = document.getElementById('fname');
+        const lname = document.getElementById('lname');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function checkDisable() {
+    // disable submit when either field is empty; enable when both have text
+        submitBtn.disabled = fname.value.trim() === '' || lname.value.trim() === '';
+        }
+
+        fname.addEventListener('input', checkDisable);
+        lname.addEventListener('input', checkDisable);
+        checkDisable();
+
+</script>
     <br>
-    <a href="myprojects.html"><p style="text-align:center; font-size: 240%; border: 5px outset #EDEDED;"><strong>My projects</strong></p></a>
-    <br>
-    <a href="helpfullinks.html"><p style="text-align:center; font-size: 240%; border: 5px outset #EDEDED;"><strong>Helpful Links</strong></p></a>
-    <br>
-    <a href="text.html"><p style="text-align:center; font-size: 70%; border: 5px outset #EDEDED; width: 8%;"><strong>back button</strong></p></a>
     <br>
     <footer>
+        <br>
+        <br>
         <hr>
-        <p class="text">© 2025 2063235's Portfolio</p>
-        <p class="text"><a href="mailto:2063235@learn.vsb.bc.ca">2063235@learn.vsb.bc.ca</a></p>
+        <p style="text-align:center; font-size: 80%;">© 2025 2063235's Webpage</p>
+        <p class="text" style="font-size: 70%;"><a href="mailto:2063235@learn.vsb.bc.ca">2063235@learn.vsb.bc.ca</a></p>
     </footer>
 </body>
 <style>
@@ -33,25 +49,27 @@
         background-color: lightgrey;
         border: 5px none grey;
         }
-    .images {
-        border: 5px outset #EDEDED;
-        background-color: lightgrey;  
+    input {
         display: block;
         margin: auto;
-        width: 40%;
+        font-size: medium;
+        width: 30%;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+    label {
+
+        display: block;
+        margin: auto;
+        font-size: large;
+        width: 33%;
+        text-align: left;
     }
     .text {
         text-align: center;
     }
-    h1 {
-        display: block;
-        margin: auto;
-        font-size: 360%;
-    }
-    p {
-        display: block;
-        margin: auto;
-        width: 35%;
-    }
 </style>
+
+</head>
 </html>
