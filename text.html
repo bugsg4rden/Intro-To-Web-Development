@@ -1,19 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signage</title>
+
 <body>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <form action="/index.html">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" id="submitBtn" value="Submit" disabled>
+    </form>
 
-<h1>The form element</h1>
+    <script>
+        const fname = document.getElementById('fname');
+        const lname = document.getElementById('lname');
+        const submitBtn = document.getElementById('submitBtn');
 
-<form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
-</form>
+        function checkDisable() {
+    // disable submit when either field is empty; enable when both have text
+        submitBtn.disabled = fname.value.trim() === '' || lname.value.trim() === '';
+        }
 
-<p>Click the "Submit" button and the form-data will be sent to a page on the 
-server called "action_page.php".</p>
+        fname.addEventListener('input', checkDisable);
+        lname.addEventListener('input', checkDisable);
+        checkDisable();
 
+</script>
+    <br>
+    <br>
+    <footer>
+        <br>
+        <br>
+        <hr>
+        <p style="text-align:center; font-size: 80%;">© 2025 2063235's Webpage</p>
+        <p class="text" style="font-size: 70%;"><a href="mailto:2063235@learn.vsb.bc.ca">2063235@learn.vsb.bc.ca</a></p>
+    </footer>
 </body>
+<style>
+    body {
+        background-color: lightgrey;
+        border: 5px none grey;
+        }
+    input {
+        display: block;
+        margin: auto;
+        font-size: medium;
+        width: 30%;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+    label {
+
+        display: block;
+        margin: auto;
+        font-size: large;
+        width: 33%;
+        text-align: left;
+    }
+    .text {
+        text-align: center;
+    }
+</style>
+
+</head>
 </html>
